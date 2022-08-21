@@ -87,3 +87,25 @@ with open (csv_path) as csvfile:
     print("Greatest Increase in Profits: " + months[max_index],max)
     print("Greatest Decrease in Profits: " + months[min_index], min)
 
+output_file = 'Homeworks\\03-Python\\Instructions\\PyBank\\Analysis.txt'
+with open(output_file, "w", newline="") as datafile:
+    
+    print("Total months :" + str(len(budgetDatalist)))
+    print(f"--------------------")
+    print("Net profit and loss: " + str(sum(Net_Profit_loss))+ " $")
+    print(f"--------------------")
+    print("Average change:" + str(average))
+    print(f"--------------------")
+    print(f"Greatest Increase in Profits: " + months[max_index],max)
+    print(f"--------------------")
+    print("Greatest Decrease in Profits: " + months[min_index], min)
+
+    datafile.write("Total months :" + str(len(budgetDatalist)))
+    datafile.write(f"--------------------")
+    datafile.write("Net profit and loss: " + str(sum(Net_Profit_loss))+ " $")
+    datafile.write(f"--------------------")
+    datafile.write("Average change:" + str(average))
+    datafile.write(f"--------------------")
+    datafile.write(f"Greatest Increase in Profits: " + months[max_index])
+    datafile.write(f"--------------------")
+    datafile.write("Greatest Decrease in Profits: " + months[min_index])
